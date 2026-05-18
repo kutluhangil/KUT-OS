@@ -1,0 +1,20 @@
+export const minimalTheme = {
+  name: "minimal" as const,
+  label: "Minimal",
+  vars: {
+    "--bg-primary": "#0a0a0a",
+    "--bg-secondary": "#111111",
+    "--bg-elevated": "#1a1a1a",
+    "--border": "#1f1f1f",
+    "--border-strong": "#2a2a2a",
+    "--text-primary": "#ededed",
+    "--text-secondary": "#a1a1a1",
+    "--text-muted": "#6b6b6b",
+    "--text-disabled": "#404040",
+    "--accent": "#c1ff00",
+    "--accent-dim": "#c1ff0033",
+    "--success": "#4ade80",
+    "--warning": "#fbbf24",
+    "--error": "#f87171",
+  },
+};

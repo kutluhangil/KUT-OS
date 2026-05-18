@@ -1,0 +1,20 @@
+export const mainframeTheme = {
+  name: "mainframe" as const,
+  label: "IBM Mainframe",
+  vars: {
+    "--bg-primary": "#001100",
+    "--bg-secondary": "#001800",
+    "--bg-elevated": "#002200",
+    "--border": "#003300",
+    "--border-strong": "#004400",
+    "--text-primary": "#00cc33",
+    "--text-secondary": "#009922",
+    "--text-muted": "#006611",
+    "--text-disabled": "#003308",
+    "--accent": "#00ff41",
+    "--accent-dim": "#00ff4133",
+    "--success": "#44ff44",
+    "--warning": "#ffff00",
+    "--error": "#ff4444",
+  },
+};

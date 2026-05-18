@@ -1,0 +1,20 @@
+export const cyberpunkTheme = {
+  name: "cyberpunk" as const,
+  label: "Cyberpunk",
+  vars: {
+    "--bg-primary": "#0d0221",
+    "--bg-secondary": "#160338",
+    "--bg-elevated": "#1f0450",
+    "--border": "#2d0a6b",
+    "--border-strong": "#3d0f8a",
+    "--text-primary": "#00f0ff",
+    "--text-secondary": "#00b8cc",
+    "--text-muted": "#007a88",
+    "--text-disabled": "#004455",
+    "--accent": "#ff00ff",
+    "--accent-dim": "#ff00ff33",
+    "--success": "#00ff88",
+    "--warning": "#ffaa00",
+    "--error": "#ff2244",
+  },
+};

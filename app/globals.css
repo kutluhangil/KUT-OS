@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme: Minimal (default) ─────────────────────────────── */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-elevated: #1a1a1a;
+  --border: #1f1f1f;
+  --border-strong: #2a2a2a;
+
+  --text-primary: #ededed;
+  --text-secondary: #a1a1a1;
+  --text-muted: #6b6b6b;
+  --text-disabled: #404040;
+
+  --accent: #c1ff00;
+  --accent-dim: #c1ff0033;
+
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --error: #f87171;
+
+  --cursor: var(--accent);
+
+  --padding-terminal: 32px;
+  --line-height: 1.65;
+  --cursor-blink: 1.06s;
+}
+
+/* ─── Theme: Cyberpunk ──────────────────────────────────────── */
+[data-theme="cyberpunk"] {
+  --bg-primary: #0d0221;
+  --bg-secondary: #160338;
+  --bg-elevated: #1f0450;
+  --border: #2d0a6b;
+  --border-strong: #3d0f8a;
+
+  --text-primary: #00f0ff;
+  --text-secondary: #00b8cc;
+  --text-muted: #007a88;
+  --text-disabled: #004455;
+
+  --accent: #ff00ff;
+  --accent-dim: #ff00ff33;
+
+  --success: #00ff88;
+  --warning: #ffaa00;
+  --error: #ff2244;
+}
+
+/* ─── Theme: Mainframe (IBM 3270) ───────────────────────────── */
+[data-theme="mainframe"] {
+  --bg-primary: #001100;
+  --bg-secondary: #001800;
+  --bg-elevated: #002200;
+  --border: #003300;
+  --border-strong: #004400;
+
+  --text-primary: #00cc33;
+  --text-secondary: #009922;
+  --text-muted: #006611;
+  --text-disabled: #003308;
+
+  --accent: #00ff41;
+  --accent-dim: #00ff4133;
+
+  --success: #44ff44;
+  --warning: #ffff00;
+  --error: #ff4444;
+}
+
+/* ─── Base Reset ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-jetbrains), "JetBrains Mono", "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  cursor: text;
+
+  /* Ligatures */
+  font-feature-settings: "calt", "liga", "ss01", "ss02";
+}
+
+/* ─── Scrollbar Hidden ──────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ─── Selection ─────────────────────────────────────────────── */
+::selection {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+/* ─── Cursor Blink ──────────────────────────────────────────── */
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: cursor-blink var(--cursor-blink) steps(2) infinite;
+}
+
+/* ─── Terminal Animations ───────────────────────────────────── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-output {
+  animation: fade-in-up 120ms ease-out forwards;
+}
+
+/* ─── Boot Sequence ─────────────────────────────────────────── */
+@keyframes boot-line-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.boot-line {
+  animation: boot-line-in 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── Theme Transition ──────────────────────────────────────── */
+body,
+body * {
+  transition:
+    background-color 400ms ease,
+    border-color 400ms ease,
+    color 400ms ease;
+}
+
+/* Exclude animations from transition reset */
+.no-transition,
+.cursor-blink,
+.boot-line,
+.animate-output {
+  transition: none;
+}
+
+/* ─── Utility Classes ───────────────────────────────────────── */
+.text-accent {
+  color: var(--accent);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-success {
+  color: var(--success);
+}
+.text-warning {
+  color: var(--warning);
+}
+.text-error {
+  color: var(--error);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+.bg-elevated {
+  background-color: var(--bg-elevated);
+}
+
+.border-default {
+  border-color: var(--border);
+}
+.border-strong {
+  border-color: var(--border-strong);
+}
+
+/* ─── Scrollable Terminal Area ──────────────────────────────── */
+.terminal-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+/* ─── No Select (for UI chrome) ────────────────────────────── */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
