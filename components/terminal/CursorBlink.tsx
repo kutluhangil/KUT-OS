@@ -1,14 +1,16 @@
 "use client";
 
+import type React from "react";
 import { useTerminalStore } from "@/store/useTerminalStore";
 import { cn } from "@/lib/utils/cn";
 
 interface CursorBlinkProps {
   className?: string;
+  style?: React.CSSProperties;
   active?: boolean;
 }
 
-export function CursorBlink({ className, active = true }: CursorBlinkProps) {
+export function CursorBlink({ className, style, active = true }: CursorBlinkProps) {
   const { cursorStyle } = useTerminalStore();
 
   const isBlock = cursorStyle === "block";
@@ -22,6 +24,7 @@ export function CursorBlink({ className, active = true }: CursorBlinkProps) {
         background: "var(--cursor)",
         verticalAlign: "text-bottom",
         animationPlayState: active ? "running" : "paused",
+        ...style,
       }}
       aria-hidden="true"
     />

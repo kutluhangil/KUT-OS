@@ -6,12 +6,14 @@ import type { ReactNode, ComponentType } from "react";
 
 export type Theme = "minimal" | "cyberpunk" | "mainframe";
 
-export type OutputEntry =
-  | { id: string; type: "text"; content: string; timestamp: Date }
-  | { id: string; type: "react"; content: ReactNode; timestamp: Date }
-  | { id: string; type: "app"; component: ComponentType; timestamp: Date }
-  | { id: string; type: "error"; message: string; timestamp: Date }
-  | { id: string; type: "command"; content: string; timestamp: Date };
+export type OutputEntryInput =
+  | { type: "text"; content: string }
+  | { type: "react"; content: ReactNode }
+  | { type: "app"; component: ComponentType }
+  | { type: "error"; message: string }
+  | { type: "command"; content: string };
+
+export type OutputEntry = OutputEntryInput & { id: string; timestamp: Date };
 
 export interface HistoryEntry {
   id: string;
@@ -59,7 +61,7 @@ export interface TerminalState {
   setTheme: (theme: Theme) => void;
 
   setInput: (input: string) => void;
-  pushOutput: (entry: Omit<OutputEntry, "id" | "timestamp">) => void;
+  pushOutput: (entry: OutputEntryInput) => void;
   clearOutput: () => void;
 
   pushHistory: (command: string) => void;
