@@ -1,0 +1,29 @@
+"use client";
+
+import { useTerminalStore } from "@/store/useTerminalStore";
+import { cn } from "@/lib/utils/cn";
+
+interface CursorBlinkProps {
+  className?: string;
+  active?: boolean;
+}
+
+export function CursorBlink({ className, active = true }: CursorBlinkProps) {
+  const { cursorStyle } = useTerminalStore();
+
+  const isBlock = cursorStyle === "block";
+
+  return (
+    <span
+      className={cn("inline-block cursor-blink", className)}
+      style={{
+        width: isBlock ? "8px" : "2px",
+        height: "1em",
+        background: "var(--cursor)",
+        verticalAlign: "text-bottom",
+        animationPlayState: active ? "running" : "paused",
+      }}
+      aria-hidden="true"
+    />
+  );
+}
