@@ -32,10 +32,29 @@ import { socialCommand } from "./portfolio/social";
 import { resumeCommand } from "./portfolio/resume";
 import { nowCommand } from "./portfolio/now";
 
+// ── Apps ──────────────────────────────────────────────────────
+import { matrixCommand } from "./apps/matrix";
+import { snakeCommand } from "./apps/snake";
+import { tetrisCommand } from "./apps/tetris";
+
 // ── Easter ────────────────────────────────────────────────────
 import { sudoCommand } from "./easter/sudo";
 import { coffeeCommand } from "./easter/coffee";
 import { hireMeCommand } from "./easter/hire-me";
+import {
+  fortuneCommand,
+  cowsayCommand,
+  hackCommand,
+  fortyTwoCommand,
+  xyzzyCommand,
+  vimExitCommand,
+  exitCommand,
+  nightModeCommand,
+  secretCommand,
+  makeCommand,
+  weatherCommand,
+  factoryResetCommand,
+} from "./easter/all-eggs";
 
 // Register all commands
 [
@@ -63,7 +82,22 @@ import { hireMeCommand } from "./easter/hire-me";
   socialCommand,
   resumeCommand,
   nowCommand,
+  matrixCommand,
+  snakeCommand,
+  tetrisCommand,
   sudoCommand,
   coffeeCommand,
   hireMeCommand,
+  fortuneCommand,
+  cowsayCommand,
+  hackCommand,
+  fortyTwoCommand,
+  xyzzyCommand,
+  vimExitCommand,
+  exitCommand,
+  nightModeCommand,
+  secretCommand,
+  makeCommand,
+  weatherCommand,
+  factoryResetCommand,
 ].forEach((cmd) => registry.register(cmd));

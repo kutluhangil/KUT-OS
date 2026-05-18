@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState, useCallback } from "react";
+import dynamic from "next/dynamic";
 import { useTerminalStore } from "@/store/useTerminalStore";
 import { StatusBar } from "./StatusBar";
 import { InputLine } from "./InputLine";
@@ -12,8 +13,21 @@ import { executeCommand } from "@/lib/shell/executor";
 // Load all command registrations on mount
 import "@/commands";
 
+// Lazy-loaded apps
+const MatrixRain = dynamic(
+  () => import("@/components/apps/MatrixRain").then((m) => ({ default: m.MatrixRain })),
+  { ssr: false }
+);
+const Snake = dynamic(() => import("@/components/apps/Snake").then((m) => ({ default: m.Snake })), {
+  ssr: false,
+});
+const Tetris = dynamic(
+  () => import("@/components/apps/Tetris").then((m) => ({ default: m.Tetris })),
+  { ssr: false }
+);
+
 export function Terminal() {
-  const { output, pushOutput } = useTerminalStore();
+  const { output, pushOutput, activeApp } = useTerminalStore();
   const outputEndRef = useRef<HTMLDivElement>(null);
   const [isExecuting, setIsExecuting] = useState(false);
   const [tabState, setTabState] = useState<{ completions: string[]; selected: number }>({
@@ -25,6 +39,28 @@ export function Terminal() {
   useEffect(() => {
     outputEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [output]);
+
+  // Konami code
+  useEffect(() => {
+    import("@/lib/utils/konami").then(({ listenKonami }) => {
+      const cleanup = listenKonami(() => {
+        pushOutput({
+          type: "text",
+          content: [
+            "",
+            "  ✦ ↑↑↓↓←→←→BA — KONAMI CODE ACTIVATED",
+            "",
+            "  You have unlocked: nothing.",
+            "  Just kidding.",
+            "  You unlocked the knowledge that you know the Konami code.",
+            "  That's worth something.",
+            "",
+          ].join("\n"),
+        });
+      });
+      return cleanup;
+    });
+  }, [pushOutput]);
 
   // Show MOTD on first mount
   useEffect(() => {
@@ -74,6 +110,11 @@ export function Terminal() {
 
   return (
     <FSProvider>
+      {/* Fullscreen app overlays */}
+      {activeApp === "matrix" && <MatrixRain />}
+      {activeApp === "snake" && <Snake />}
+      {activeApp === "tetris" && <Tetris />}
+
       <div
         className="flex flex-col h-screen w-full overflow-hidden"
         style={{ background: "var(--bg-primary)" }}
