@@ -1,16 +1,16 @@
 import type { Command } from "@/lib/shell/types";
-import { cat } from "@/lib/fs/ops";
+import { tree } from "@/lib/fs/ops";
 import { useTerminalStore } from "@/store/useTerminalStore";
 
-export const catCommand: Command = {
-  name: "cat",
-  description: "print file contents",
-  usage: "cat <file>",
+export const treeCommand: Command = {
+  name: "tree",
+  description: "display directory tree",
+  usage: "tree [path]",
   category: "fs",
   handler: (args) => {
-    if (!args[0]) return { type: "error", message: "cat: missing filename" };
     const cwd = useTerminalStore.getState().cwd;
-    const result = cat(args[0], cwd);
+    const path = args[0] ?? ".";
+    const result = tree(path, cwd);
     if (!result.ok) return { type: "error", message: result.error };
     return { type: "text", content: result.data };
   },

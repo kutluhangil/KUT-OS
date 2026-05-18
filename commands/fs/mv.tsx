@@ -1,16 +1,16 @@
 import type { Command } from "@/lib/shell/types";
-import { mkdir } from "@/lib/fs/ops";
+import { mv } from "@/lib/fs/ops";
 import { useTerminalStore } from "@/store/useTerminalStore";
 
-export const mkdirCommand: Command = {
-  name: "mkdir",
-  description: "create a new directory",
-  usage: "mkdir <name>",
+export const mvCommand: Command = {
+  name: "mv",
+  description: "move or rename a file",
+  usage: "mv <source> <destination>",
   category: "fs",
   handler: (args) => {
-    if (!args[0]) return { type: "error", message: "mkdir: missing directory name" };
+    if (args.length < 2) return { type: "error", message: "mv: missing destination" };
     const cwd = useTerminalStore.getState().cwd;
-    const result = mkdir(args[0], cwd);
+    const result = mv(args[0], args[1], cwd);
     if (!result.ok) return { type: "error", message: result.error };
     return { type: "noop" };
   },

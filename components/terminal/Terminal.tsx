@@ -6,6 +6,7 @@ import { StatusBar } from "./StatusBar";
 import { InputLine } from "./InputLine";
 import { OutputRenderer } from "./OutputRenderer";
 import { HintBar } from "./HintBar";
+import { FSProvider } from "./FSProvider";
 import { executeCommand } from "@/lib/shell/executor";
 
 // Load all command registrations on mount
@@ -72,30 +73,32 @@ export function Terminal() {
   );
 
   return (
-    <div
-      className="flex flex-col h-screen w-full overflow-hidden"
-      style={{ background: "var(--bg-primary)" }}
-    >
-      <StatusBar />
+    <FSProvider>
+      <div
+        className="flex flex-col h-screen w-full overflow-hidden"
+        style={{ background: "var(--bg-primary)" }}
+      >
+        <StatusBar />
 
-      {/* Output area */}
-      <div className="flex-1 overflow-y-auto terminal-scroll px-4 py-3 space-y-0.5">
-        {output.map((entry) => (
-          <OutputRenderer key={entry.id} entry={entry} />
-        ))}
-        <div ref={outputEndRef} />
-      </div>
+        {/* Output area */}
+        <div className="flex-1 overflow-y-auto terminal-scroll px-4 py-3 space-y-0.5">
+          {output.map((entry) => (
+            <OutputRenderer key={entry.id} entry={entry} />
+          ))}
+          <div ref={outputEndRef} />
+        </div>
 
-      {/* Input */}
-      <div style={{ borderTop: "1px solid var(--border)" }}>
-        <InputLine
-          onSubmit={handleSubmit}
-          onTabComplete={(completions, selected) => setTabState({ completions, selected })}
-          tabState={tabState}
-          disabled={isExecuting}
-        />
-        <HintBar completions={tabState.completions} selected={tabState.selected} query="" />
+        {/* Input */}
+        <div style={{ borderTop: "1px solid var(--border)" }}>
+          <InputLine
+            onSubmit={handleSubmit}
+            onTabComplete={(completions, selected) => setTabState({ completions, selected })}
+            tabState={tabState}
+            disabled={isExecuting}
+          />
+          <HintBar completions={tabState.completions} selected={tabState.selected} query="" />
+        </div>
       </div>
-    </div>
+    </FSProvider>
   );
 }

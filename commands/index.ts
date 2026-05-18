@@ -11,6 +11,17 @@ import { historyCommand } from "./meta/history";
 import { themeCommand } from "./meta/theme";
 import { shareCommand } from "./meta/share";
 
+// ── Filesystem ────────────────────────────────────────────────
+import { lsCommand } from "./fs/ls";
+import { cdCommand } from "./fs/cd";
+import { catCommand } from "./fs/cat";
+import { pwdCommand } from "./fs/pwd";
+import { mkdirCommand } from "./fs/mkdir";
+import { touchCommand } from "./fs/touch";
+import { rmCommand } from "./fs/rm";
+import { mvCommand } from "./fs/mv";
+import { treeCommand } from "./fs/tree";
+
 // ── Easter ────────────────────────────────────────────────────
 import { sudoCommand } from "./easter/sudo";
 import { coffeeCommand } from "./easter/coffee";
@@ -25,6 +36,15 @@ import { hireMeCommand } from "./easter/hire-me";
   historyCommand,
   themeCommand,
   shareCommand,
+  lsCommand,
+  cdCommand,
+  catCommand,
+  pwdCommand,
+  mkdirCommand,
+  touchCommand,
+  rmCommand,
+  mvCommand,
+  treeCommand,
   sudoCommand,
   coffeeCommand,
   hireMeCommand,
