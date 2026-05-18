@@ -52,6 +52,7 @@ export interface TerminalState {
   activeApp: string | null;
   commandCount: number;
   secretUnlocked: boolean;
+  nowPlaying: string | null;
 
   /* ─── Actions ─────────────────────────────────────────────── */
 
@@ -79,6 +80,7 @@ export interface TerminalState {
 
   setActiveApp: (app: string | null) => void;
   incrementCommandCount: () => void;
+  setNowPlaying: (title: string | null) => void;
 }
 
 /* ─── Store ─────────────────────────────────────────────────── */
@@ -109,6 +111,7 @@ export const useTerminalStore = create<TerminalState>()(
         activeApp: null,
         commandCount: 0,
         secretUnlocked: false,
+        nowPlaying: null,
 
         /* ── Actions ── */
         setBooted: (booted) => set({ booted }),
@@ -150,6 +153,7 @@ export const useTerminalStore = create<TerminalState>()(
         setCursorStyle: (cursorStyle) => set({ cursorStyle }),
 
         setActiveApp: (activeApp) => set({ activeApp }),
+        setNowPlaying: (nowPlaying) => set({ nowPlaying }),
 
         incrementCommandCount: () =>
           set((state) => ({

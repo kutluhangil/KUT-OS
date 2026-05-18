@@ -7,6 +7,7 @@ import { CursorBlink } from "./CursorBlink";
 import { navigateHistory } from "@/lib/shell/history";
 import { getCompletions, applyCompletion } from "@/lib/shell/autocomplete";
 import { abortCurrentCommand } from "@/lib/shell/executor";
+import { soundbank } from "@/lib/audio/soundbank";
 
 interface InputLineProps {
   onSubmit: (value: string) => void;
@@ -103,6 +104,7 @@ export function InputLine({ onSubmit, onTabComplete, tabState, disabled }: Input
         // Any other key clears tab state
         if (!e.ctrlKey && !e.metaKey && !e.altKey) {
           onTabComplete([], 0);
+          if (e.key.length === 1) soundbank.play("keyClick");
         }
     }
   };

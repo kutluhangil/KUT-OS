@@ -13,7 +13,8 @@ const THEMES: { value: Theme; label: string; color: string }[] = [
 ];
 
 export function StatusBar() {
-  const { theme, setTheme, soundEnabled, setSoundEnabled, musicEnabled } = useTerminalStore();
+  const { theme, setTheme, soundEnabled, setSoundEnabled, musicEnabled, nowPlaying } =
+    useTerminalStore();
   const [clock, setClock] = useState(getISTTime());
 
   // Real-time clock
@@ -54,8 +55,23 @@ export function StatusBar() {
 
       {/* Right: controls */}
       <div className="flex items-center gap-3">
-        {/* Music indicator */}
-        {musicEnabled && (
+        {/* Now playing */}
+        {musicEnabled && nowPlaying && (
+          <div
+            className="font-mono text-xs"
+            style={{
+              color: "var(--text-muted)",
+              maxWidth: "140px",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+            title={nowPlaying}
+          >
+            ♪ {nowPlaying}
+          </div>
+        )}
+        {musicEnabled && !nowPlaying && (
           <div className="font-mono text-xs" style={{ color: "var(--text-muted)" }}>
             ♪
           </div>

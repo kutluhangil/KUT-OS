@@ -10,6 +10,7 @@ import { whoamiCommand } from "./core/whoami";
 import { historyCommand } from "./meta/history";
 import { themeCommand } from "./meta/theme";
 import { shareCommand } from "./meta/share";
+import { soundCommand } from "./meta/sound";
 
 // ── Filesystem ────────────────────────────────────────────────
 import { lsCommand } from "./fs/ls";
@@ -36,6 +37,7 @@ import { nowCommand } from "./portfolio/now";
 import { matrixCommand } from "./apps/matrix";
 import { snakeCommand } from "./apps/snake";
 import { tetrisCommand } from "./apps/tetris";
+import { playCommand } from "./apps/play";
 
 // ── Easter ────────────────────────────────────────────────────
 import { sudoCommand } from "./easter/sudo";
@@ -65,6 +67,7 @@ import {
   historyCommand,
   themeCommand,
   shareCommand,
+  soundCommand,
   lsCommand,
   cdCommand,
   catCommand,
@@ -85,6 +88,7 @@ import {
   matrixCommand,
   snakeCommand,
   tetrisCommand,
+  playCommand,
   sudoCommand,
   coffeeCommand,
   hireMeCommand,

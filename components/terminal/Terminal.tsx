@@ -9,6 +9,7 @@ import { OutputRenderer } from "./OutputRenderer";
 import { HintBar } from "./HintBar";
 import { FSProvider } from "./FSProvider";
 import { executeCommand } from "@/lib/shell/executor";
+import { soundbank } from "@/lib/audio/soundbank";
 
 // Load all command registrations on mount
 import "@/commands";
@@ -23,6 +24,10 @@ const Snake = dynamic(() => import("@/components/apps/Snake").then((m) => ({ def
 });
 const Tetris = dynamic(
   () => import("@/components/apps/Tetris").then((m) => ({ default: m.Tetris })),
+  { ssr: false }
+);
+const MusicPlayer = dynamic(
+  () => import("@/components/apps/MusicPlayer").then((m) => ({ default: m.MusicPlayer })),
   { ssr: false }
 );
 
@@ -98,6 +103,11 @@ export function Terminal() {
       setIsExecuting(true);
       try {
         const result = await executeCommand(raw);
+        if (result.output.type === "error") {
+          soundbank.play("error");
+        } else if (result.output.type !== "noop") {
+          soundbank.play("success");
+        }
         if (result.output.type !== "noop") {
           pushOutput(result.output as Exclude<typeof result.output, { type: "noop" }>);
         }
@@ -114,6 +124,7 @@ export function Terminal() {
       {activeApp === "matrix" && <MatrixRain />}
       {activeApp === "snake" && <Snake />}
       {activeApp === "tetris" && <Tetris />}
+      {activeApp === "music" && <MusicPlayer />}
 
       <div
         className="flex flex-col h-screen w-full overflow-hidden"
