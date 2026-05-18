@@ -22,6 +22,16 @@ import { rmCommand } from "./fs/rm";
 import { mvCommand } from "./fs/mv";
 import { treeCommand } from "./fs/tree";
 
+// ── Portfolio ─────────────────────────────────────────────────
+import { aboutCommand } from "./portfolio/about";
+import { projectsCommand } from "./portfolio/projects";
+import { experienceCommand } from "./portfolio/experience";
+import { skillsCommand } from "./portfolio/skills";
+import { contactCommand } from "./portfolio/contact";
+import { socialCommand } from "./portfolio/social";
+import { resumeCommand } from "./portfolio/resume";
+import { nowCommand } from "./portfolio/now";
+
 // ── Easter ────────────────────────────────────────────────────
 import { sudoCommand } from "./easter/sudo";
 import { coffeeCommand } from "./easter/coffee";
@@ -45,6 +55,14 @@ import { hireMeCommand } from "./easter/hire-me";
   rmCommand,
   mvCommand,
   treeCommand,
+  aboutCommand,
+  projectsCommand,
+  experienceCommand,
+  skillsCommand,
+  contactCommand,
+  socialCommand,
+  resumeCommand,
+  nowCommand,
   sudoCommand,
   coffeeCommand,
   hireMeCommand,
