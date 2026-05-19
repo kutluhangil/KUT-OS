@@ -13,7 +13,8 @@ export const whoamiCommand: Command = {
     }
     return {
       type: "text",
-      content: "  kutluhan.gil — solo dev · turkey · saas builder\n  try \`about\` for more.",
+      content:
+        "  kutluhan.gül — full stack developer · istanbul, turkey\n  try \`about\` for more.",
     };
   },
 };

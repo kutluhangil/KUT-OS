@@ -3,8 +3,8 @@ import type { Command } from "@/lib/shell/types";
 const LINKS = [
   { label: "GitHub    ", url: "github.com/kutluhangil", icon: "⌥" },
   { label: "LinkedIn  ", url: "linkedin.com/in/kutluhangil", icon: "◈" },
-  { label: "Twitter   ", url: "twitter.com/kutluhangil", icon: "◎" },
-  { label: "Email     ", url: "hi@kutluhan.dev", icon: "◇" },
+  { label: "Portfolio ", url: "kutluhangul.com", icon: "◎" },
+  { label: "Email     ", url: "kutluhangul@windowslive.com", icon: "◇" },
 ];
 
 export const socialCommand: Command = {

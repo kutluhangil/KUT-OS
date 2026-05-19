@@ -3,22 +3,44 @@ import type { Command } from "@/lib/shell/types";
 const TIMELINE = `
   ── Experience ────────────────────────────────────────
 
-  2024 ────●  Solo Founder · Multiple SaaS Projects
-            │  Built and launched 10+ web products
-            │  Full-stack: design → dev → marketing → support
-            │  EntrepreneurLoop, NeoRescue, MeetMind, and more
+  2025 ────●  Full Stack Developer · GoIT Student
+            │  Intensive full-stack bootcamp
+            │  React, Node.js, TypeScript, REST APIs, Git
             │
-  2022 ────●  Freelance Developer · Various Clients
-            │  Web apps for startups across EU & TR
-            │  React, Next.js, Node.js, design systems
+  2022 ────●  Senior Selling Partner Support Associate
+            │  Amazon · Remote
+            │  Aug 2022 – Nov 2024
+            │  Supported EU marketplace sellers, resolved
+            │  complex account and technical escalations,
+            │  worked cross-functionally with global teams
             │
-  2020 ────●  Self-taught Journey Begins
-               HTML → CSS → JS → React → TypeScript → everything
+  2021 ────●  Guest Service Agent
+            │  Crowne Plaza Istanbul Tuzla
+            │  Sep 2021 – Aug 2022
+            │  Front desk operations, guest relations,
+            │  complaint resolution, team coordination
+            │
+  2019 ────●  Guest Service Agent
+            │  Radisson Blu Istanbul Tuzla
+            │  May 2019 – Sep 2021
+            │  Night audit, reception management,
+            │  concierge services
+            │
+  2013 ────●  Floor / Night Supervisor
+               Work & Travel USA · Park City, Utah
+               2013 – 2016 · Hospitality operations
+
+  ── Education ─────────────────────────────────────────
+
+  2025–now  IT School GoIT              Full Stack Developer
+  2022–2026 Anadolu University          Computer Programming
+  2019–2021 Anadolu University          Web Coding
+  2017–2019 Atilim University           Tourism (Master's)
+  2009–2014 Mustafa Kemal University    Tourism (Bachelor's)
 
   ──────────────────────────────────────────────────────
 
-  Education: Self-taught. The internet is my university.
-  Languages: Turkish (native), English (fluent)
+  Languages: Turkish (native) · English (C1)
 
   Run \`skills\` to see tech stack details.
 `;

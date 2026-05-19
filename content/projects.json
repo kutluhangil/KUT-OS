@@ -1,102 +1,129 @@
 [
   {
-    "name": "EntrepreneurLoop",
-    "slug": "entrepreneurloop",
-    "description": "Analytics platform for indie hackers — MRR tracking, churn analysis, customer insights.",
-    "stack": ["Next.js", "Supabase", "Recharts", "Stripe"],
-    "type": "saas",
-    "year": 2024,
+    "name": "Cinemania",
+    "slug": "cinemania",
+    "description": "Movie discovery app with search, filtering, and personal watchlists.",
+    "stack": ["React", "Redux", "REST API", "CSS Modules"],
+    "type": "web-app",
+    "year": 2025,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/cinemania"
+  },
+  {
+    "name": "Focus Frame",
+    "slug": "focus-frame",
+    "description": "Productivity timer with task management and focus session tracking.",
+    "stack": ["React", "TypeScript", "LocalStorage"],
+    "type": "web-app",
+    "year": 2025,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/focus-frame"
+  },
+  {
+    "name": "Slim Moms",
+    "slug": "slim-moms",
+    "description": "Calorie counter and diet tracker with personalized daily intake recommendations.",
+    "stack": ["React", "Redux", "Node.js", "REST API"],
+    "type": "web-app",
+    "year": 2025,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/slim-moms"
+  },
+  {
+    "name": "Money Guard",
+    "slug": "money-guard",
+    "description": "Personal finance tracker — income, expenses, and visual monthly breakdowns.",
+    "stack": ["React", "Redux", "Chart.js", "Node.js"],
+    "type": "web-app",
+    "year": 2025,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/money-guard"
+  },
+  {
+    "name": "ReBuildReBreak",
+    "slug": "rebuildrebreak",
+    "description": "Collaborative coding challenge platform — rebuild, refactor, break and learn.",
+    "stack": ["React", "TypeScript", "Node.js", "REST API"],
+    "type": "web-app",
+    "year": 2025,
     "status": "active",
-    "url": ""
+    "url": "github.com/kutluhangil/rebuildrebreak"
   },
   {
-    "name": "NeoRescue",
-    "slug": "neorescue",
-    "description": "Animal rescue coordination — connects shelters, volunteers, and adopters on a live map.",
-    "stack": ["Next.js", "Supabase", "Mapbox", "Stripe"],
-    "type": "saas",
+    "name": "City Verse",
+    "slug": "city-verse",
+    "description": "Interactive city explorer — browse neighborhoods, attractions, and local events.",
+    "stack": ["React", "Redux", "REST API", "Mapbox"],
+    "type": "web-app",
     "year": 2024,
-    "status": "active",
-    "url": "github.com/kutluhangil/neorescue"
+    "status": "shipped",
+    "url": "github.com/kutluhangil/city-verse"
   },
   {
-    "name": "MeetMind",
-    "slug": "meetmind",
-    "description": "AI meeting assistant — transcribes, summarizes, and extracts action items from calls.",
-    "stack": ["Next.js", "OpenAI", "Supabase", "WebRTC"],
-    "type": "saas",
+    "name": "Next Step",
+    "slug": "next-step",
+    "description": "Career roadmap builder — set goals, track milestones, and get mentored.",
+    "stack": ["React", "TypeScript", "Node.js", "REST API"],
+    "type": "web-app",
     "year": 2024,
-    "status": "wip"
+    "status": "shipped",
+    "url": "github.com/kutluhangil/next-step"
   },
   {
-    "name": "ReturnBox",
-    "slug": "returnbox",
-    "description": "E-commerce return management for Shopify stores. Reduce friction, increase retention.",
-    "stack": ["Next.js", "Shopify API", "PostgreSQL"],
-    "type": "saas",
+    "name": "SubSense",
+    "slug": "subsense",
+    "description": "Subscription tracker — never lose track of what you pay for each month.",
+    "stack": ["React", "Redux", "LocalStorage", "TypeScript"],
+    "type": "web-app",
     "year": 2024,
-    "status": "wip"
+    "status": "shipped",
+    "url": "github.com/kutluhangil/subsense"
   },
   {
-    "name": "Appointify",
-    "slug": "appointify",
-    "description": "Booking and scheduling SaaS for service businesses. Calendar sync, reminders, payments.",
-    "stack": ["Next.js", "Supabase", "Google Calendar API", "Stripe"],
-    "type": "saas",
-    "year": 2023,
-    "status": "shipped"
-  },
-  {
-    "name": "ContentForge",
-    "slug": "contentforge",
-    "description": "AI content repurposing — turn a blog post into tweets, threads, LinkedIn posts, emails.",
-    "stack": ["Next.js", "Anthropic", "Supabase"],
-    "type": "saas",
-    "year": 2024,
-    "status": "active"
-  },
-  {
-    "name": "FreelancerKit",
-    "slug": "freelancerkit",
-    "description": "All-in-one toolkit for freelancers — proposals, contracts, invoices, time tracking.",
-    "stack": ["Next.js", "Supabase", "Stripe", "PDF.js"],
-    "type": "saas",
-    "year": 2023,
-    "status": "shipped"
-  },
-  {
-    "name": "FitCRM",
-    "slug": "fitcrm",
-    "description": "CRM for personal trainers and fitness coaches. Client tracking, plans, progress photos.",
-    "stack": ["Next.js", "Supabase", "Stripe"],
-    "type": "saas",
-    "year": 2023,
-    "status": "shipped"
-  },
-  {
-    "name": "Obsidian Dex",
-    "slug": "obsidian-dex",
-    "description": "Obsidian plugin — structured data queries for your knowledge vault. 180+ GitHub stars.",
-    "stack": ["TypeScript", "Obsidian API", "Dataview"],
+    "name": "GitVitals",
+    "slug": "gitvitals",
+    "description": "GitHub profile analytics dashboard — contributions, streaks, language stats.",
+    "stack": ["React", "TypeScript", "GitHub API"],
     "type": "open-source",
-    "year": 2023,
+    "year": 2024,
     "status": "active",
-    "url": "github.com/kutluhangil/obsidian-dex"
+    "url": "github.com/kutluhangil/gitvitals"
   },
   {
-    "name": "Palindrome Runner",
-    "slug": "palindrome-runner",
-    "description": "Endless runner mobile game with a palindrome word mechanic. Built in 48h hackathon.",
-    "stack": ["React Native", "Expo", "Matter.js"],
-    "type": "game",
-    "year": 2023,
-    "status": "shipped"
+    "name": "Minik Gezgin",
+    "slug": "minik-gezgin",
+    "description": "Turkish children's geography app — interactive map, quizzes, and fun facts.",
+    "stack": ["React", "CSS Animations", "JavaScript"],
+    "type": "web-app",
+    "year": 2024,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/minik-gezgin"
+  },
+  {
+    "name": "Time Shift",
+    "slug": "time-shift",
+    "description": "World clock and timezone converter with team availability visualization.",
+    "stack": ["React", "TypeScript", "Date-fns"],
+    "type": "web-app",
+    "year": 2024,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/time-shift"
+  },
+  {
+    "name": "Apartman Management",
+    "slug": "apartman-management",
+    "description": "Apartment building manager — residents, dues, announcements, and maintenance.",
+    "stack": ["React", "Node.js", "REST API", "TypeScript"],
+    "type": "web-app",
+    "year": 2024,
+    "status": "shipped",
+    "url": "github.com/kutluhangil/apartman-management"
   },
   {
     "name": "KUT/OS",
     "slug": "kut-os",
-    "description": "This terminal. A browser-based OS portfolio with boot sequence, games, AI fallback.",
-    "stack": ["Next.js", "Three.js", "Framer Motion", "Anthropic"],
+    "description": "This terminal. A browser-based OS portfolio with boot sequence, games, AI assistant.",
+    "stack": ["Next.js", "Three.js", "TypeScript", "Anthropic"],
     "type": "open-source",
     "year": 2025,
     "status": "active",

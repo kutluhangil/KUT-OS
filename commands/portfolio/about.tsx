@@ -3,22 +3,27 @@ import type { Command } from "@/lib/shell/types";
 const BIO = `
   ╭──────────────────────────────────────────────────────╮
   │                                                      │
-  │   kutluhan gil                                       │
-  │   solo developer & saas builder                     │
+  │   kutluhan gül                                       │
+  │   full stack developer                               │
   │   istanbul, turkey                                   │
   │                                                      │
   ╰──────────────────────────────────────────────────────╯
 
-  I build web products — fast, obsessively, and usually
-  without sleeping enough.
+  Full stack developer with a background that spans
+  hospitality, customer success at Amazon, and now
+  software engineering. I moved into tech deliberately —
+  not by accident.
 
-  Self-taught. Started with HTML in 2018. Fell down the
-  rabbit hole. Never came back.
+  Studied at GoIT (2025–present), Anadolu University
+  (Computer Programming), and built a stack covering
+  React, TypeScript, Node.js, REST APIs, and clean UI.
 
-  Currently: building multiple SaaS products in public,
-  learning everything there is to know about distribution,
-  and occasionally shipping something that makes people
-  ask "how?"
+  My hospitality years taught me that great products,
+  like great service, are about the person on the
+  other side of the screen. That's why I obsess over UX.
+
+  Currently: building projects that solve real problems,
+  shipping code daily, leveling up the full stack.
 
   Beliefs:
   ● Ship before you're ready.

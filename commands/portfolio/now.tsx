@@ -2,35 +2,34 @@ import type { Command } from "@/lib/shell/types";
 
 const NOW = `
   ── Now ───────────────────────────────────────────────
-  (updated: May 2025 · nownownow.com inspired)
+  (updated: May 2026 · nownownow.com inspired)
 
   BUILDING ────────────────────────────────────────────
 
   · KUT/OS — this terminal portfolio
-    Writing blog posts about the build process.
-    Planning an open-source release.
+    Full-featured OS-in-a-browser. You're using it.
 
-  · EntrepreneurLoop — analytics for indie hackers
-    Adding cohort analysis and MRR forecasting.
-
-  · ContentForge — AI content repurposing
-    Beta testing with 30 early users.
+  · Full stack projects at GoIT
+    React, Node.js, TypeScript — shipping real apps.
 
   LEARNING ────────────────────────────────────────────
 
-  · Distribution: how to actually get users
-  · RAG systems and knowledge bases
-  · Video editing for demo content
+  · Advanced React patterns & state management
+  · Backend: REST APIs, databases, auth flows
+  · TypeScript deep dives
+  · Prompt engineering & AI-assisted development
 
   READING ─────────────────────────────────────────────
 
-  · "The Lean Startup" — Eric Ries
+  · MDN docs (the real university)
+  · Clean Code — Robert C. Martin
   · Hacker News (as always)
 
   OBSESSING OVER ──────────────────────────────────────
 
-  · Getting the first paying customer faster
-  · Reducing time from idea to shipped feature
+  · Bridging my hospitality UX instincts with code
+  · Shipping things that actually work for real people
+  · Getting better every day, measurably
 
   ──────────────────────────────────────────────────────
   Run \`projects\` to see what I've shipped.

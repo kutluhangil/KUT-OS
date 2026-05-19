@@ -12,18 +12,23 @@ const SKILLS: SkillCategory[] = [
   {
     label: "frontend ",
     key: "frontend",
-    level: 95,
-    stack: "Next.js · React · TypeScript · Tailwind",
+    level: 90,
+    stack: "HTML/CSS · JavaScript · React · Redux · TypeScript",
   },
   {
     label: "backend  ",
     key: "backend",
-    level: 78,
-    stack: "Node.js · Supabase · PostgreSQL · Prisma",
+    level: 75,
+    stack: "Node.js · REST API · Express",
   },
-  { label: "devops   ", key: "devops", level: 60, stack: "Docker · Nginx · Cloudflare · Vercel" },
-  { label: "mobile   ", key: "mobile", level: 45, stack: "React Native · Expo" },
-  { label: "ai / ml  ", key: "ai", level: 72, stack: "Anthropic · OpenAI · LangChain · RAG" },
+  { label: "tooling  ", key: "tooling", level: 80, stack: "Git · VSCode · XCode · Vercel" },
+  { label: "design   ", key: "design", level: 70, stack: "Clean UI · Figma · Tailwind CSS" },
+  {
+    label: "ai/vibes ",
+    key: "ai",
+    level: 85,
+    stack: "Prompt Engineering · Vibecoding · Anthropic",
+  },
 ];
 
 export const skillsCommand: Command = {
@@ -41,11 +46,10 @@ export const skillsCommand: Command = {
 
     lines.push(
       "",
-      "  ── Also ─────────────────────────────────────────",
+      "  ── Languages ─────────────────────────────────────",
       "",
-      "  Design     Figma · shadcn/ui · Framer",
-      "  Testing    Vitest · Playwright",
-      "  Tooling    Git · pnpm · Turborepo · GitHub Actions",
+      "  Turkish    Native",
+      "  English    C1 — Professional",
       ""
     );
 

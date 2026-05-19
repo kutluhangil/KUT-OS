@@ -1,10 +1,13 @@
 import projectsData from "@/content/projects.json";
 
 const BIO = `
-kutluhan gil — solo developer & saas builder, istanbul, turkey.
-self-taught. started with HTML in 2018. ships multiple saas products.
+kutluhan gül — full stack developer, istanbul, turkey.
+background: hospitality (Amazon SR support, hotel management) → now software engineering.
+studying at GoIT IT School (2025-present), Anadolu University Computer Programming (2022-2026).
+skills: html/css, javascript, react, redux, typescript, node.js, rest api, git, prompt engineering.
 beliefs: ship before you're ready. taste is a skill. great tools deserve great UIs.
-currently building web products — fast, obsessively.
+languages: turkish (native), english (c1).
+contact: kutluhangul@windowslive.com | linkedin.com/in/kutluhangil | github.com/kutluhangil
 `;
 
 const PROJECTS_SUMMARY = (
@@ -22,7 +25,7 @@ ${BIO}
 His projects:
 ${PROJECTS_SUMMARY}
 
-Tech stack: Next.js 14, TypeScript, Tailwind CSS, Supabase, Stripe, React, Node.js, Three.js, Framer Motion.
+Tech stack: React, Redux, TypeScript, Node.js, REST API, Next.js 14, Three.js, Framer Motion, Tailwind CSS.
 Portfolio: this terminal (KUT/OS) — browser-based terminal OS built with Next.js.
 
 Rules:
