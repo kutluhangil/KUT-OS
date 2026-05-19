@@ -11,6 +11,7 @@ import { historyCommand } from "./meta/history";
 import { themeCommand } from "./meta/theme";
 import { shareCommand } from "./meta/share";
 import { soundCommand } from "./meta/sound";
+import { askCommand } from "./meta/ask";
 
 // ── Filesystem ────────────────────────────────────────────────
 import { lsCommand } from "./fs/ls";
@@ -68,6 +69,7 @@ import {
   themeCommand,
   shareCommand,
   soundCommand,
+  askCommand,
   lsCommand,
   cdCommand,
   catCommand,
