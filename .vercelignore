@@ -1,0 +1,9 @@
+.git
+*.log
+.DS_Store
+node_modules
+.next/cache
+tests
+*.test.ts
+*.test.tsx
+vitest.config.ts
