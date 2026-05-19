@@ -39,6 +39,8 @@ import { matrixCommand } from "./apps/matrix";
 import { snakeCommand } from "./apps/snake";
 import { tetrisCommand } from "./apps/tetris";
 import { playCommand } from "./apps/play";
+import { vimCommand } from "./apps/vim";
+import { guestbookCommand } from "./apps/guestbook";
 
 // ── Easter ────────────────────────────────────────────────────
 import { sudoCommand } from "./easter/sudo";
@@ -91,6 +93,8 @@ import {
   snakeCommand,
   tetrisCommand,
   playCommand,
+  vimCommand,
+  guestbookCommand,
   sudoCommand,
   coffeeCommand,
   hireMeCommand,

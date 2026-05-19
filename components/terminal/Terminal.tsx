@@ -30,6 +30,13 @@ const MusicPlayer = dynamic(
   () => import("@/components/apps/MusicPlayer").then((m) => ({ default: m.MusicPlayer })),
   { ssr: false }
 );
+const Guestbook = dynamic(
+  () => import("@/components/apps/Guestbook").then((m) => ({ default: m.Guestbook })),
+  { ssr: false }
+);
+const Vim = dynamic(() => import("@/components/apps/Vim").then((m) => ({ default: m.Vim })), {
+  ssr: false,
+});
 
 export function Terminal() {
   const { output, pushOutput, activeApp } = useTerminalStore();
@@ -125,6 +132,8 @@ export function Terminal() {
       {activeApp === "snake" && <Snake />}
       {activeApp === "tetris" && <Tetris />}
       {activeApp === "music" && <MusicPlayer />}
+      {activeApp === "guestbook" && <Guestbook />}
+      {activeApp?.startsWith("vim:") && <Vim />}
 
       <div
         className="flex flex-col h-screen w-full overflow-hidden"
