@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="KUT/OS — a living terminal portfolio that boots in the browser">
+<style>
+.bg{animation:bg 12s linear infinite}
+@keyframes bg{0%,8%{fill:#e9f5ea}28%{fill:#1d4a2a}48%,80%{fill:#020803}90%,100%{fill:#e9f5ea}}
+.ink{animation:ink 12s linear infinite}
+@keyframes ink{0%,8%{fill:#10261a}28%{fill:#eaffef}48%,80%{fill:#dfffe8}90%,100%{fill:#10261a}}
+.rule{animation:rule 12s linear infinite}
+@keyframes rule{0%,8%{stroke:#10261a33}28%{stroke:#eaffef33}48%,80%{stroke:#dfffe833}90%,100%{stroke:#10261a33}}
+.panel{animation:panel 12s linear infinite}
+@keyframes panel{0%,8%{fill:#10261a12}28%{fill:#eaffef12}48%,80%{fill:#dfffe812}90%,100%{fill:#10261a12}}
+.muted{opacity:.72}
+.stars{animation:stars 12s linear infinite}
+@keyframes stars{0%,8%{opacity:0}28%{opacity:.25}48%,80%{opacity:.9}90%,100%{opacity:0}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.25}}
+.lit{filter:drop-shadow(0 0 4px currentColor)}
+.pulse{animation:pulse 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@keyframes spin{0%{transform:scaleX(1)}50%{transform:scaleX(0)}100%{transform:scaleX(-1)}}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(3.2);opacity:0}}
+@keyframes dash{to{stroke-dashoffset:-20}}
+@keyframes grow{0%{transform:scaleY(.08)}35%,80%{transform:scaleY(1)}100%{transform:scaleY(.08)}}
+@keyframes draw{0%{stroke-dashoffset:700}45%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-700}}
+@keyframes blink{50%{opacity:0}}
+@keyframes feed{0%{transform:translateY(150px);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(-30px);opacity:0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes slide{to{transform:translateX(100px)}}
+@keyframes eq{from{transform:scaleY(.15)}to{transform:scaleY(1)}}
+@keyframes drop{0%,6%{transform:scaleY(0);opacity:0}16%,88%{transform:scaleY(1);opacity:1}96%,100%{transform:scaleY(0);opacity:0}}
+@keyframes gauge{0%,10%{stroke-dashoffset:390}40%,85%{stroke-dashoffset:110}100%{stroke-dashoffset:390}}
+@keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes sweep{0%{transform:skewX(-18deg) translateX(0)}60%,100%{transform:skewX(-18deg) translateX(788px)}}
+@keyframes type0{0%,0%{transform:scaleX(0)}8%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}@keyframes type1{0%,10%{transform:scaleX(0)}18%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}@keyframes type2{0%,20%{transform:scaleX(0)}28%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}@keyframes type3{0%,30%{transform:scaleX(0)}38%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}@keyframes type4{0%,40%{transform:scaleX(0)}48%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}@keyframes type5{0%,50%{transform:scaleX(0)}58%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}@keyframes type6{0%,60%{transform:scaleX(0)}68%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" width="1200" height="440" rx="28" fill="#e9f5ea"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" letter-spacing="2.4"><text class="ink muted" x="64" y="104">LIVING TERMINAL PORTFOLIO · NEXT.JS</text></g>
+<text class="ink" x="60" y="236" font-family="'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif" font-style="italic" font-size="78" letter-spacing="-1">KUT/OS.</text>
+<text class="ink muted" x="64" y="300" font-family="'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif" font-size="20">Not a portfolio. An operating system.</text>
+<line class="rule" x1="64" y1="372" x2="1136" y2="372"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" letter-spacing="1.8">
+  <text class="ink muted" x="64" y="404">REAL SHELL · VIRTUAL FS</text>
+  <text class="ink muted" x="600" y="404" text-anchor="middle">SNAKE · TETRIS · VIM</text>
+  <text class="ink muted" x="1136" y="404" text-anchor="end">15+ EASTER EGGS</text>
+</g>
+<rect class="panel rule" x="652" y="92" width="488" height="262" rx="24"/>
+<g class="stars"><circle cx="717" cy="330" r="0.6" fill="#fff" style="animation:tw 3s ease-in-out 1.9s infinite"/><circle cx="696.3" cy="180.7" r="1.3" fill="#fff" style="animation:tw 1.9s ease-in-out 0.7s infinite"/><circle cx="1015.4" cy="272.1" r="1.9" fill="#fff" style="animation:tw 1.7s ease-in-out 0.3s infinite"/><circle cx="1050.1" cy="242.3" r="1.1" fill="#fff" style="animation:tw 2.8s ease-in-out 0.5s infinite"/><circle cx="973" cy="260.1" r="1.1" fill="#fff" style="animation:tw 2.5s ease-in-out 0.7s infinite"/><circle cx="994.8" cy="327" r="1.5" fill="#fff" style="animation:tw 3.3s ease-in-out 0.8s infinite"/><circle cx="1057.5" cy="199.7" r="1.1" fill="#fff" style="animation:tw 2.3s ease-in-out 1s infinite"/><circle cx="679.2" cy="310.9" r="1.1" fill="#fff" style="animation:tw 3.7s ease-in-out 0.2s infinite"/><circle cx="911.5" cy="177" r="0.9" fill="#fff" style="animation:tw 2.6s ease-in-out 1.6s infinite"/><circle cx="845.8" cy="299.2" r="1" fill="#fff" style="animation:tw 1.8s ease-in-out 0s infinite"/><circle cx="742.9" cy="302.6" r="1.8" fill="#fff" style="animation:tw 3s ease-in-out 2s infinite"/><circle cx="860.7" cy="161.1" r="1.7" fill="#fff" style="animation:tw 1.8s ease-in-out 1.1s infinite"/><circle cx="1078.3" cy="272" r="1.2" fill="#fff" style="animation:tw 2.3s ease-in-out 0.6s infinite"/><circle cx="694.1" cy="193.8" r="1.9" fill="#fff" style="animation:tw 4s ease-in-out 0.1s infinite"/><circle cx="933.8" cy="176.8" r="1.5" fill="#fff" style="animation:tw 2.5s ease-in-out 0.9s infinite"/><circle cx="883.8" cy="176.9" r="1.3" fill="#fff" style="animation:tw 3.5s ease-in-out 0.9s infinite"/><circle cx="1045.3" cy="227.4" r="0.8" fill="#fff" style="animation:tw 1.9s ease-in-out 1.5s infinite"/><circle cx="1061.5" cy="185.8" r="1" fill="#fff" style="animation:tw 3.1s ease-in-out 1.9s infinite"/><circle cx="684.4" cy="257.6" r="1.7" fill="#fff" style="animation:tw 3.8s ease-in-out 1.9s infinite"/><circle cx="905.7" cy="140.4" r="1.6" fill="#fff" style="animation:tw 1.9s ease-in-out 0.8s infinite"/><circle cx="834.4" cy="309.9" r="0.7" fill="#fff" style="animation:tw 3.2s ease-in-out 1.7s infinite"/><circle cx="742.3" cy="282.2" r="1.2" fill="#fff" style="animation:tw 3.3s ease-in-out 1.2s infinite"/><circle cx="800.2" cy="316.1" r="1.2" fill="#fff" style="animation:tw 3.7s ease-in-out 0.8s infinite"/><circle cx="893.6" cy="140.9" r="0.8" fill="#fff" style="animation:tw 1.9s ease-in-out 0.3s infinite"/><circle cx="791.9" cy="248" r="1.7" fill="#fff" style="animation:tw 2.3s ease-in-out 0.1s infinite"/><circle cx="784.9" cy="319.5" r="1.4" fill="#fff" style="animation:tw 2.6s ease-in-out 0.8s infinite"/></g>
+<rect x="682" y="110" width="428" height="226" rx="14" fill="#0d0b14" fill-opacity=".86" stroke="#39ff7a" stroke-opacity=".5"/>
+<circle cx="702" cy="128" r="5" fill="#ff5f57"/><circle cx="720" cy="128" r="5" fill="#febc2e"/><circle cx="738" cy="128" r="5" fill="#28c840"/>
+<text x="896" y="132" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#fff" fill-opacity=".55">kut.os — zsh</text>
+<rect x="728" y="162" width="166.2" height="9" rx="4.5" fill="#39ff7a" fill-opacity="0.9" style="animation:type0 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="170" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">$</text><rect x="728" y="186" width="202.2" height="9" rx="4.5" fill="#ff4fd8" fill-opacity="0.9" style="animation:type1 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="194" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">›</text><rect x="728" y="210" width="262.9" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.55" style="animation:type2 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="218" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">›</text><rect x="728" y="234" width="315.6" height="9" rx="4.5" fill="#39ff7a" fill-opacity="0.9" style="animation:type3 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="242" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">›</text><rect x="728" y="258" width="175.5" height="9" rx="4.5" fill="#ff4fd8" fill-opacity="0.9" style="animation:type4 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="266" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">›</text><rect x="728" y="282" width="270.5" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.55" style="animation:type5 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="290" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">›</text><rect x="728" y="306" width="197" height="9" rx="4.5" fill="#39ff7a" fill-opacity="0.9" style="animation:type6 12s steps(14) infinite;transform-origin:728px 0"/><text x="704" y="314" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#3ad1ff">›</text><rect x="728" y="328" width="10" height="14" fill="#39ff7a" style="animation:blink 1s steps(1) infinite"/>
+</svg>
